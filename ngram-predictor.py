@@ -5,7 +5,7 @@ import scipy
 import math
 
 # Our json formatter for AllenAI's c4 dataset on HuggingFace: https://huggingface.co/datasets/allenai/c4/tree/main
-import json_formatter as formatter
+import json-formatter as formatter
 
 
 datasetsToImport = 1
