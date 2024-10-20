@@ -4,7 +4,7 @@ import scipy.sparse as sparse
 import scipy
 import math
 
-# Our json formatter for AllenAI's c4 dataset on HuggingFace
+# Our json formatter for AllenAI's c4 dataset on HuggingFace: https://huggingface.co/datasets/allenai/c4/tree/main
 import json_formatter as formatter
 
 
@@ -13,9 +13,7 @@ datasetsToImport = 1
 
 test = []
 for i in range(datasetsToImport):
-    # first = "" 
-    # second = "" + i % 10
-    tests = formatter.extract_text_from_json(f"c4-train.000{i//10}{i%10}-of-01024.json", 200000)
+    tests = formatter.extract_text_from_json(f"c4-train.000{i//10}{i%10}-of-01024.json", 100000)
     test.extend(tests)
 
 # Preprocessing to normalize text.
