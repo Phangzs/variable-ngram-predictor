@@ -3,9 +3,9 @@
 A next-word predictor based on variable n-gram contexts.
 
 # Data
-I used [AllenAI's c4 dataset on HuggingFace]([url](https://huggingface.co/datasets/allenai/c4/tree/main)) to train the model. The code supports multiple files, but on a laptop 1 json file takes enough time to train.
+I used [AllenAI's c4 dataset on HuggingFace](https://huggingface.co/datasets/allenai/c4/tree/main) to train the model. The code supports multiple files, but on a laptop 1 json file takes enough time to train.
 
-Specifically, here is the download link to the file I used to train the model: [https://huggingface.co/datasets/allenai/c4/blob/main/en/c4-train.00000-of-01024.json.gz]([url](https://huggingface.co/datasets/allenai/c4/blob/main/en/c4-train.00000-of-01024.json.gz))
+Specifically, here is the download link to the file I used to train the model: <br /> [https://huggingface.co/datasets/allenai/c4/blob/main/en/c4-train.00000-of-01024.json.gz](https://huggingface.co/datasets/allenai/c4/blob/main/en/c4-train.00000-of-01024.json.gz)
 
 # Methods
 Instead of using unigrams or bigrams, the code finds the _best_ n-gram in order to predict the next single word. This is done by computing the entropy of the probability distribution of an n-gram and using a scoring algorithm to favor more predictable contexts with strong candidates for the next word.
@@ -21,7 +21,7 @@ Suppose we have the following: <br /><br /> $$T=\text{Total lines of text}$$ <br
 Suppose we have the following: <br /><br /> $$V=\text{Vocabulary size}$$ <br /> $$n=\text{Maximum n-gram order},$$ <br /> <br />Then we have a space complexity of $$\bf O(V^{n}).$$
 
 # Performance
-Based on training the model on 200,000 lines of text, here are some of it's outputs.
+After training the model of 200,000 lines of text with a max n-gram of 5, it produces the following outputs:
 
 `Given the context 'how is the best', the next 20 words predicted are:
 possible outcome of any event is the sound sytem that makes the moment live and love in the book she`
