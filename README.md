@@ -23,7 +23,7 @@ $$\textbf{score}=\frac{\log{(\text{total count}+1)}\times{\text{max probability}
 After the max score for the context for each n-gram model is found and the associated probabilities per word are captured, we raise every probability to the power of $$\alpha > 1,$$ a variability restrictor that punishes lower probabilities the higher $\alpha$ is. We then finally normalize the probabilities in order to create a distribution from which to randomly pick a word from.
 
 # Time-Complexity
-Suppose we have the following: <br /><br /> $$T=\text{Total lines of text}$$ <br /> $$n=\text{Maximum n-gram order},$$ <br /> <br />Then we have a time complexity of $$\bf O(Tn^2).$$
+Suppose we have the following: <br /><br /> $$t=\text{Total lines of text}$$ <br /> $$n=\text{Maximum n-gram order},$$ <br /> <br />Then we have a time complexity of $$\bf O(tn^2).$$
 
 # Space-Complexity
 Suppose we have the following: <br /><br /> $$V=\text{Vocabulary size}$$ <br /> $$n=\text{Maximum n-gram order},$$ <br /> <br />Then we have a space complexity of $$\bf O(V^{n}).$$
